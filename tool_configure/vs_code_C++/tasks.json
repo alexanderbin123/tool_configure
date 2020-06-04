@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "command": "gcc",
+    "args": [
+        "-Wall",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileBasenameNoExtension}.exe"
+    ],
+    "echoCommand": true,
+    "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+        ],
+        "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+        }
+    },
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "D:\\M_WING64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "D:\\M_WING64\\mingw64\\bin"
+            }
+        }
+    ]
+}
